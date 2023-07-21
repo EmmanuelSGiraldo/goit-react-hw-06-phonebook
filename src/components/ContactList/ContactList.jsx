@@ -1,22 +1,22 @@
+import styles from './ContactList.module.scss'; // Importamos los estilos desde el archivo module.scss
+
 import { useSelector } from 'react-redux';
 import { ContactItem } from '../ContactItem/ContactItem';
-import { List } from './ContactList.styled'
 import { getVisibleContacts } from '../../redux/selectors';
 
-
 export const ContactList = () => {
-    const visibleContacts = useSelector(getVisibleContacts);
+  const visibleContacts = useSelector(getVisibleContacts);
 
-    return (
-        <List>
-            {visibleContacts.map(({ id, name, number }) => (
-                <ContactItem
-                    key={id}
-                    id={id}
-                    name={name}
-                    number={number}
-                />
-            ))}
-        </List>
-    );
+  return (
+    <ul className={styles.list}> 
+      {visibleContacts.map(({ id, name, number }) => (
+        <ContactItem
+          key={id}
+          id={id}
+          name={name}
+          number={number}
+        />
+      ))}
+    </ul>
+  );
 };

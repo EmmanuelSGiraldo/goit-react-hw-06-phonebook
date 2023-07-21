@@ -1,16 +1,17 @@
-import { Container, Titile, SubTitile } from './App.styled';
+import styles from './App.module.scss'; // Importamos los estilos desde el archivo module.scss
+
 import { ContactForm } from '../ContactForm';
 import { Filter } from '../Filter';
 import { ContactList } from '../ContactList';
 
 export const App = () => {
   return (
-    <Container>
-      <Titile>Phonebook</Titile>
+    <div className={styles.container}> {/* Aplicamos el nombre de clase del módulo de estilos */}
+      <h1 className={styles.title}>Phonebook</h1> {/* Aplicamos el nombre de clase del módulo de estilos */}
       <ContactForm />
-      <SubTitile>Contacts</SubTitile>
-      <Filter/>
-      <ContactList/>
-    </Container>
+      <h2 className={styles.subtitle}>Contacts</h2> {/* Aplicamos el nombre de clase del módulo de estilos */}
+      <Filter />
+      <ContactList />
+    </div>
   );
 };

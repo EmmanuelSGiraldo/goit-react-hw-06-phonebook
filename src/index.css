@@ -1,10 +1,9 @@
 @import 'normalize.css';
 
 :root {
-  --accent-color: #2196F3;
-  --primary-text-color: #757575;
+  --accent-color:  #3c5cdf;
+  --primary-text-color:   #3c5cdf;
   --secondary-text-color: #212121;
-
   --primary-background-color: #ffffff;
   --secondary-background-color: #F5F4FA;
   --accent-background-color: #2F303A;
