@@ -1,4 +1,4 @@
-import styles from "./Filter.module.scss"; // Importamos los estilos desde el archivo module.scss
+import styles from "./Filter.module.scss";
 import { useDispatch, useSelector } from "react-redux";
 import { updateFilter } from "../../redux/filterSlice";
 import { getFilter } from "../../redux/selectors";
@@ -15,10 +15,9 @@ export const Filter = () => {
     <>
       <label className={styles.label} htmlFor="search">
         {" "}
-        {/* Aplicamos el nombre de clase del módulo de estilos */}
         Find contacts by name
         <input
-          className={styles.input} // Aplicamos el nombre de clase del módulo de estilos
+          className={styles.input}
           type="text"
           name="search"
           value={filter}
@@ -28,4 +27,3 @@ export const Filter = () => {
     </>
   );
 };
-
